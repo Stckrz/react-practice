@@ -26,8 +26,7 @@
   align-content: center;
 }
 .content{
-  border: 1px solid black;
-  width: 50%;
+  flex-direction: column;
 }
 .style-stuff{
   color: red;
@@ -36,3 +35,4 @@
 .navbar{
 justify-content: space-between !important;
 }
+
