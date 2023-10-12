@@ -35,4 +35,7 @@
 .navbar{
 justify-content: space-between !important;
 }
-
+.barButton{
+display: flex;
+justify-content: left;
+}
