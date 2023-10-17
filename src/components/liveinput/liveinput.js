@@ -71,6 +71,11 @@ export function AppendList() {
 		setText("")
 	}
 
+	function handleRemoveClick(str){
+		listCopy = listCopy.splice(listCopy.indexOf(str), 1);
+		setList([...listCopy]);
+	}
+
 	return (
 		<div>
 			<div>
@@ -82,13 +87,15 @@ export function AppendList() {
 				{list.map((item) => (
 
 					<li>
-						{item}
+						{item}<button 
+							className = "btn btn-sm btn-primary" 
+							onClick={()=> handleRemoveClick("balls")}
+						>delete</button>
 					</li>
 				))}
 
 			</ul>
 		</div >
-
 	)
 }
 
