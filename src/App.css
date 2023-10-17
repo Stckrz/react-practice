@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -18,12 +22,28 @@
   color: #61dafb;
 }
 
+.bigWrap{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	width: 30%;
+}
 .content-wrapper{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  background-color: gray;
+  border: 2px solid black;
+  width: 100%;
+  gap: 10px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 1em;
+  min-height: 50px;
+  min-width: 50px;
 }
 .content{
   flex-direction: column;
@@ -34,6 +54,7 @@
 }
 .navbar{
 justify-content: space-between !important;
+width: 100vw;
 }
 .barButton{
 display: flex;
