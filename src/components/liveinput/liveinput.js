@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useRef } from 'react';
 
 
 export function MyInput() {
@@ -53,51 +52,6 @@ export function MyInput2() {
 	);
 }
 
-export function AppendList() {
-	const [list, setList] = useState([
-		"balls",
-		"bepis"
-	])
-	const [text, setText] = useState("")
-	let listCopy = [...list];
-
-	function handleChange(e) {
-		setText( e.target.value )
-	}
-
-	function handleClick() {
-		listCopy.push(text);
-		setList([...listCopy]);
-		setText("")
-	}
-
-	function handleRemoveClick(str){
-		listCopy = listCopy.splice(listCopy.indexOf(str), 1);
-		setList([...listCopy]);
-	}
-
-	return (
-		<div>
-			<div>
-				<input className="form-control me-2 inputBox" value={text} onChange={handleChange} />
-				<button className="btn btn-primary" onClick={handleClick}>Add</button>
-
-			</div>
-			<ul>
-				{list.map((item) => (
-
-					<li>
-						{item}<button 
-							className = "btn btn-sm btn-primary" 
-							onClick={()=> handleRemoveClick("balls")}
-						>delete</button>
-					</li>
-				))}
-
-			</ul>
-		</div >
-	)
-}
 
 // <button onClick={() => setForm("buttstuff")}>aaah</button>
 

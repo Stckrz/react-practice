@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { BootstrapNavToggle } from './components/navbar/navbar';
 import { DisplayForm, MyInput, MyInput2, AppendList } from './components/liveinput/liveinput';
 import { StateCount, DisplayCount } from './components/statestuff/statestuff';
+import { ToDoList } from './components/todolist/todolist';
 
 
 function App() {
@@ -11,11 +12,13 @@ function App() {
 			<div className="App">
 				<BootstrapNavToggle />
 				<div className="bigWrap">
+				{/*
 					<div className="content-wrapper"><StatePlay /></div>
 					<div className="content-wrapper"><MyInput /></div>
 					<div className="content-wrapper"><MyInput2 /></div>
 					<div className="content-wrapper"><StateCount /></div>
-					<div className="content-wrapper"><AppendList /></div>
+					<div className="content-wrapper"><AppendList /></div>*/}
+					<div className="content-wrapper"><ToDoList /></div>
 			</div>
 		</div>
 	);
