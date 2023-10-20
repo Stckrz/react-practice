@@ -26,9 +26,11 @@ export function ToDoList() {
 	}
 
 	return (
-		<div>
-			<div>
-				<input className="form-control me-2 inputBox" value={text} onChange={handleChange} />
+		<div className = "wrapper container">
+			<div className=" inputBox">
+				<div className="">
+				<input className="form-control me-2" value={text} onChange={handleChange} />
+				</div>
 				<button className="btn btn-primary" onClick={handleClick}>Add</button>
 
 			</div>
@@ -37,11 +39,16 @@ export function ToDoList() {
 
 					<li className="listItem">
 						<button
-							className="btn btn-sm btn-primary"
+							className="delbutt btn btn-sm btn-primary"
 							onClick={() => handleRemoveClick(item)}
 						>x</button>
+						<div className="">
 						{item}
+						</div>
+						<div className="">
+						
 						<EditInput />
+						</div>
 					</li>
 				))}
 
@@ -66,16 +73,16 @@ export function EditInput() {
 
 
 	return (
-		<div>
+		<div className="container">
 			{toggle && (
-				<div>
-					<input value={text} onChange={handleChange} />
-					<button onClick={() => { handleClick(text); setToggle(false) }}>e</button>
+				<div className="">
+					<input className="col"value={text} onChange={handleChange} />
+					<button className=" btn btn-primary" onClick={() => { handleClick(text); setToggle(false) }}>e</button>
 				</div>
 			)}
 			{!toggle && (
-				<div>
-					<button onClick={() => setToggle(!toggle)}>edit</button>
+				<div className="">
+					<button className="edbutt btn btn-primary" onClick={() => setToggle(!toggle)}>edit</button>
 				</div>
 			)}
 		</div>

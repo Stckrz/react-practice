@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { MyInput, MyInput2 } from '../liveinput/liveinput'
-
+import './navbar.css';
 
 
 export function BootstrapNavToggle() {

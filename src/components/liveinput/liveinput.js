@@ -1,31 +1,37 @@
 import { useState } from 'react';
-
+import './liveinput.css';
 
 export function MyInput() {
 	const [form, setForm] = useState({
 		enterStuff: 'stuffs',
-		buttontext: 'assycheeks',
+		buttontext: 'C',
 	});
 
 	return (
 		<>
-			<label>
-				<input
-					className="form-control me-2"
-					value={form.enterStuff}
-					onChange={e => {
-						setForm({
-							...form,
-							enterStuff: e.target.value
-						});
-					}}
-				/>
-				<button
-					className="btn btn-primary"
-					onClick={() => setForm({ ...form, enterStuff: "buttstuff" })}>{form.buttontext}
-				</button>
-			</label>
-			<p>{form.enterStuff}</p>
+			<div className="wrapper container">
+				<div className="row">
+				<div className="col-6 inputContainer">
+					<input
+						className="form-control me-2"
+						value={form.enterStuff}
+						onChange={e => {
+							setForm({
+								...form,
+								enterStuff: e.target.value
+							});
+						}}
+					/>
+					<button
+						className="btn btn-primary"
+						onClick={() => setForm({ ...form, enterStuff: "buttstuff" })}>{form.buttontext}
+					</button>
+				</div>
+				<div className="col-6">
+					<p>{form.enterStuff}</p>
+				</div>
+				</div>
+			</div>
 		</>
 	);
 }

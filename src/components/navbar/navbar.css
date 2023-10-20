@@ -1,0 +1,7 @@
+.navbar{
+width: 100vw;
+}
+.barButton{
+display: flex;
+justify-content: flex-start;
+}

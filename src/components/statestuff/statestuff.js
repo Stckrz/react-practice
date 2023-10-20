@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 
-export function StateCount() {
+export function ObjectList() {
 	const users = [
 		{ name: "Stckrz", age: 32 },
 		{ name: "bob", age: 5 },

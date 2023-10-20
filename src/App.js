@@ -1,24 +1,22 @@
 import './App.css';
-import { useState } from 'react';
 import { BootstrapNavToggle } from './components/navbar/navbar';
-import { DisplayForm, MyInput, MyInput2, AppendList } from './components/liveinput/liveinput';
-import { StateCount, DisplayCount } from './components/statestuff/statestuff';
+import { DisplayForm, MyInput, MyInput2, } from './components/liveinput/liveinput';
+import { ObjectList, DisplayCount } from './components/statestuff/statestuff';
 import { ToDoList } from './components/todolist/todolist';
-
-
+import { PlanetList } from './components/planets/planets';
+import { Counter } from './components/counter/counter';
 function App() {
-	const age = 17;
 	return (
-			<div className="App">
-				<BootstrapNavToggle />
-				<div className="bigWrap">
-				{/*
-					<div className="content-wrapper"><StatePlay /></div>
-					<div className="content-wrapper"><MyInput /></div>
-					<div className="content-wrapper"><MyInput2 /></div>
-					<div className="content-wrapper"><StateCount /></div>
-					<div className="content-wrapper"><AppendList /></div>*/}
-					<div className="content-wrapper"><ToDoList /></div>
+		<div className="App">
+			<BootstrapNavToggle />
+			<div className="container-md">
+				<div className="row row-cols-4">
+					<div className="col content"><MyInput /></div>
+					<div className="col content"><MyInput2 /></div>
+					<div className="col content"><PlanetList /></div>
+					<div className="col content"><ToDoList /></div>
+					<div className="col content"><Counter /></div>
+				</div>
 			</div>
 		</div>
 	);
@@ -34,16 +32,6 @@ const User = (props) => {
 	);
 };
 
-const Job = (props) => {
-	return (
-		<div className="content">
-			<h1>{props.salary}</h1>
-			<h1>{props.position}</h1>
-			<h1>{props.company}</h1>
-			<br />
-		</div>
-	)
-};
 
 const ColorPlay = (props) => {
 	return (
@@ -52,50 +40,5 @@ const ColorPlay = (props) => {
 		</div>
 	)
 };
-
-function ShowComponent() {
-	const [isShown, setIsShown] = useState(false);
-
-	return (
-		<div>
-			<button onClick={() => setIsShown(!isShown)}>Click</button>
-			{isShown && (
-				<BootstrapNavToggle />
-			)}
-		</div>
-	)
-}
-
-
-
-function StatePlay() {
-	const [addValue, setAddValue] = useState(1);
-	const [multiplyValue, setMultiplyValue] = useState(1);
-
-	function doStuff() {
-		setAddValue(addValue + 1);
-		setMultiplyValue(multiplyValue * 2);
-	}
-
-	return (
-			<div className="content">
-				<h1>Add one: ({addValue})! <br /> Multiply by two:({multiplyValue})!</h1>
-				<button
-					type="button"
-					className="btn btn-primary"
-					onClick={() => doStuff()}
-				>Increment</button>
-			</div>
-	)
-}
-
-
-
-
-
-
-
-
-
 
 export default App;
