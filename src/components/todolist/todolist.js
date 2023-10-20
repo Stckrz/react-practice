@@ -3,33 +3,31 @@ import { useState } from 'react';
 import './todolist.css';
 
 export function ToDoList() {
-	const [list, setList] = useState([
-		"balls",
-		"bepis"
-	])
-	const [text, setText] = useState("")
-	let listCopy = [...list];
+	const [list, setList] = useState([]);
+	const [text, setText] = useState("");
 
 	function handleChange(e) {
 		setText(e.target.value)
 	}
 
 	function handleClick() {
+		let listCopy = [...list];
 		listCopy.push(text);
 		setList([...listCopy]);
 		setText("")
 	}
 
 	function handleRemoveClick(str) {
+		let listCopy = [...list];
 		listCopy.splice(listCopy.indexOf(str), 1);
 		setList([...listCopy]);
 	}
 
 	return (
-		<div className = "wrapper container">
+		<div className="wrapper container">
 			<div className=" inputBox">
 				<div className="">
-				<input className="form-control me-2" value={text} onChange={handleChange} />
+					<input className="form-control me-2" value={text} onChange={handleChange} />
 				</div>
 				<button className="btn btn-primary" onClick={handleClick}>Add</button>
 
@@ -39,15 +37,14 @@ export function ToDoList() {
 
 					<li className="listItem">
 						<button
-							className="delbutt btn btn-sm btn-primary"
+							className=" btn btn-sm btn-primary"
 							onClick={() => handleRemoveClick(item)}
 						>x</button>
 						<div className="">
-						{item}
+							<EditInput item={item} list={list} setList={setList} />
 						</div>
 						<div className="">
-						
-						<EditInput />
+							{item}
 						</div>
 					</li>
 				))}
@@ -58,12 +55,17 @@ export function ToDoList() {
 }
 
 
-export function EditInput() {
+export function EditInput(props) {
 	const [toggle, setToggle] = useState(false);
 	const [text, setText] = useState("");
+	const {item, list, setList} = props
 
-	function handleClick(str) {
-
+	function handleClick() {
+		let listCopy = [...list];
+		const itemloc = listCopy.indexOf(item)
+		listCopy[itemloc] = text;
+		setList([...listCopy]);
+		setText("")
 
 	}
 
@@ -71,18 +73,17 @@ export function EditInput() {
 		setText(e.target.value)
 	}
 
-
 	return (
 		<div className="container">
 			{toggle && (
 				<div className="">
-					<input className="col"value={text} onChange={handleChange} />
-					<button className=" btn btn-primary" onClick={() => { handleClick(text); setToggle(false) }}>e</button>
+					<input className="col" value={text} onChange={handleChange} />
+					<button className="btn btn-sm btn-primary" onClick={() => { handleClick(text); setToggle(false) }}>e</button>
 				</div>
 			)}
 			{!toggle && (
 				<div className="">
-					<button className="edbutt btn btn-primary" onClick={() => setToggle(!toggle)}>edit</button>
+					<button className="btn btn-sm btn-primary" onClick={() => setToggle(!toggle)}>e</button>
 				</div>
 			)}
 		</div>

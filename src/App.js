@@ -5,6 +5,7 @@ import { ObjectList, DisplayCount } from './components/statestuff/statestuff';
 import { ToDoList } from './components/todolist/todolist';
 import { PlanetList } from './components/planets/planets';
 import { Counter } from './components/counter/counter';
+import { Parent } from './components/propsplay/propsplay';
 function App() {
 	return (
 		<div className="App">
@@ -16,6 +17,7 @@ function App() {
 					<div className="col content"><PlanetList /></div>
 					<div className="col content"><ToDoList /></div>
 					<div className="col content"><Counter /></div>
+					<div className="col content"><Parent /></div>
 				</div>
 			</div>
 		</div>
