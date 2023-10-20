@@ -24,15 +24,6 @@ function App() {
 	);
 }
 
-const User = (props) => {
-	return (
-		<div className="content">
-			<h1>{props.name}</h1>
-			<h1>{props.age}</h1>
-			<h1>{props.email}</h1>
-		</div>
-	);
-};
 
 
 const ColorPlay = (props) => {
