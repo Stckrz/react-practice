@@ -14,7 +14,7 @@ export function PlanetList() {
 		{ name: "Uranus", isGasPlanet: true },
 	]
 	return (
-		<div>
+		<div style={{border: "2px solid #0D6EFD"}}>
 			{planets.map((planet, key) => {
 				{
 					return (

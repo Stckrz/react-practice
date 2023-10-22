@@ -5,7 +5,7 @@
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
-  background-color: black;
+  background-color: #CAE0EF;
 }
 
 
@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: gray;
+  background-color: #CAE0EF;
   border: 2px solid black;
   width: 100%;
   gap: 10px;
@@ -41,7 +41,7 @@
   min-width: 50px;
 }
 .content{
-	background-color: grey;
+	background-color: #CAE0EF;
 	border-radius: 1em;
 	padding: 10px;
 	margin: 5px;

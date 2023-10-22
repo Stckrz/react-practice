@@ -6,6 +6,7 @@ import { ToDoList } from './components/todolist/todolist';
 import { PlanetList } from './components/planets/planets';
 import { Counter } from './components/counter/counter';
 import { Parent } from './components/propsplay/propsplay';
+
 function App() {
 	return (
 		<div className="App">

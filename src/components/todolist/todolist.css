@@ -2,20 +2,44 @@
 list-style: none;
 padding: 5px;
 display: flex;
-justify-content: space-between;
+justify-content: flex-start;
 align-items: center;
 width: 100%;
 }
+
+.listAnimation{
+animation: listadd 0.5s;
+}
+@keyframes listadd{
+0%{transform: translateX(-60px);}
+100%{transform: translateX(0px);}
+
+}
+
 .inputBox{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.delbutt{
-}
 .wrapper{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 	
+}
+.editdiv{
+width: 50px;
+display: flex;
+}
+
+.listBox{
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+height: 200px;
+}
+
+.item{
+width: 200px;
 }

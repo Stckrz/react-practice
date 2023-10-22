@@ -12,7 +12,7 @@ export function ToDoList() {
 
 	function handleClick() {
 		let listCopy = [...list];
-		listCopy.push(text);
+		listCopy.unshift(text);
 		setList([...listCopy]);
 		setText("")
 	}
@@ -32,18 +32,19 @@ export function ToDoList() {
 				<button className="btn btn-primary" onClick={handleClick}>Add</button>
 
 			</div>
-			<ul>
+			<ul className="listBox">
 				{list.map((item) => (
 
-					<li className="listItem">
+					<li className="listItem listAnimation">
 						<button
-							className=" btn btn-sm btn-primary"
+
+							className="btn btn-sm btn-primary"
 							onClick={() => handleRemoveClick(item)}
 						>x</button>
-						<div className="">
-							<EditInput item={item} list={list} setList={setList} />
+						<div className="editdiv">
+							<EditInput item={item} list={list} setList={setList}/>
 						</div>
-						<div className="">
+						<div className="item">
 							{item}
 						</div>
 					</li>
@@ -76,14 +77,15 @@ export function EditInput(props) {
 	return (
 		<div className="container">
 			{toggle && (
-				<div className="">
-					<input className="col" value={text} onChange={handleChange} />
-					<button className="btn btn-sm btn-primary" onClick={() => { handleClick(text); setToggle(false) }}>e</button>
+				<div className="editdiv">
+					<input className="" value={text} onChange={handleChange} />
+					<button className="btn btn-sm btn-primary" 
+					onClick={() => { setText(""); handleClick(text); setToggle(false) }}>e</button>
 				</div>
 			)}
 			{!toggle && (
 				<div className="">
-					<button className="btn btn-sm btn-primary" onClick={() => setToggle(!toggle)}>e</button>
+					<button className="btn btn-sm btn-primary" onClick={() => {handleClick(""); setToggle(!toggle)}}>e</button>
 				</div>
 			)}
 		</div>

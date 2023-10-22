@@ -1,0 +1,58 @@
+.countBox{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #0D6EFD;
+overflow: hidden;
+color: white;
+height: 45px;
+width: 45px;
+border-radius: 10px;
+}
+
+.roll-out {
+	animation: rolldown 0.25s linear, rolldowns 0.25s linear;
+	animation-delay: 0s, 0.25s;
+}
+@keyframes rolldown {
+  0% {transform: translateY(0%);}
+  100% {transform: translateY(125%);color: grey;}
+}
+@keyframes rolldowns {
+  0% {transform: translateY(-125%);color: grey}
+  100% {transform: translateY(0%);}
+}
+
+
+.roll-in {
+	animation: rollup 0.25s linear, rollups 0.25s linear;
+	animation-delay: 0s, 0.25s;
+}
+@keyframes rollup {
+  0% {transform: translateY(0%);}
+  100% {transform: translateY(-125%);color: grey;}
+}
+@keyframes rollups {
+  0% {transform: translateY(125%);color: grey}
+  100% {transform: translateY(0%);}
+  }
+
+
+.Wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.nuttin{
+padding-bottom: 10px;
+border: none;
+background-color: #CAE0EF;
+font-size: 40px;
+opacity: 50%;
+transition: opacity 0.5s;
+}
+
+.nuttin:hover{
+opacity: 85%;
+}
