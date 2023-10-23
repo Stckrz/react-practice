@@ -10,8 +10,7 @@ export function MyInput() {
 	return (
 		<>
 			<div className="wrapper container">
-				<div className="row">
-				<div className="col-6 inputContainer">
+				<div className="inputContainer">
 					<input
 						className="form-control me-2"
 						value={form.enterStuff}
@@ -27,9 +26,8 @@ export function MyInput() {
 						onClick={() => setForm({ ...form, enterStuff: "buttstuff" })}>{form.buttontext}
 					</button>
 				</div>
-				<div className="col-6">
+				<div className="">
 					<p>{form.enterStuff}</p>
-				</div>
 				</div>
 			</div>
 		</>
@@ -46,14 +44,14 @@ export function MyInput2() {
 
 	return (
 		<>
-			<label>
+			<div className="inputContainer">
 				<input
 					className="form-control me-2"
 					value={text}
 					onChange={handleChange} />
 				<button className="btn btn-primary" onClick={() => setText("buttstuff")}>aaah</button>
+				</div>
 				<p>{text}</p>
-			</label>
 		</>
 	);
 }
