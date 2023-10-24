@@ -14,17 +14,22 @@ export function PlanetList() {
 		{ name: "Uranus", isGasPlanet: true },
 	]
 	return (
-		<div style={{border: "2px solid #0D6EFD"}}>
+		<div style={{
+			display: "flex", 
+			flexDirection: "column",
+			justifyContent: "center", 
+			alignItems: "center",
+			width: "150px",
+			height: "150px",
+			border: "2px solid #0D6EFD"
+			}}>
 			{planets.map((planet, key) => {
 				{
 					return (
 						<div>{planet.isGasPlanet && planet.name}</div>
 					)
 				}
-			})
-			}
-
-
+			})}
 		</div>
 	);
 }

@@ -1,0 +1,13 @@
+.starcontainer{
+display: flex;
+flex-direction: row;
+font-size: 30px;
+font: blue;
+}
+.star{
+cursor:pointer;
+color: #0D6EFD;
+}
+.star:hover{
+	scale: 110%;
+}

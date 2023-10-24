@@ -2,6 +2,12 @@
 display: flex;
 justify-content: center;
 align-items: center;
+width: 100%;
 
 }
-p{overflow: clip;}
+p{overflow: hide;}
+
+.textBox{
+	width: 100%;
+overflow: clip;
+}

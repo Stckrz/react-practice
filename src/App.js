@@ -6,6 +6,9 @@ import { ToDoList } from './components/todolist/todolist';
 import { PlanetList } from './components/planets/planets';
 import { Counter } from './components/counter/counter';
 import { Parent } from './components/propsplay/propsplay';
+import { ModalExample } from './components/modal/modal';
+import { Faq } from './components/faq/faq';
+import { StarRating } from './components/stars/stars';
 
 function App() {
 	return (
@@ -14,11 +17,16 @@ function App() {
 			<div className="container-md">
 				<div className="row row-cols-4">
 					<div className="col content"><MyInput /></div>
-					<div className="col content"><MyInput2 /></div>
+{/*					<div className="col content"><MyInput2 /></div>*/}
 					<div className="col content"><PlanetList /></div>
 					<div className="col content"><ToDoList /></div>
 					<div className="col content"><Counter /></div>
 					<div className="col content"><Parent /></div>
+					<div className="col content"><ModalExample /></div>
+					<div className="col content"><Faq /></div>
+					<div className="col content"><StarRating /></div>
+
+
 				</div>
 			</div>
 		</div>

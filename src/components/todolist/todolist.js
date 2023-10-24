@@ -12,7 +12,7 @@ export function ToDoList() {
 
 	function handleClick() {
 		let listCopy = [...list];
-		listCopy.unshift(text);
+		listCopy.push(text);
 		setList([...listCopy]);
 		setText("")
 	}
@@ -32,7 +32,8 @@ export function ToDoList() {
 				<button className="btn btn-primary" onClick={handleClick}>Add</button>
 
 			</div>
-			<ul className="listBox">
+			<div className="listBox">
+			<ul className="">
 				{list.map((item) => (
 
 					<li className="listItem listAnimation">
@@ -51,6 +52,7 @@ export function ToDoList() {
 				))}
 
 			</ul>
+			</div>
 		</div >
 	)
 }

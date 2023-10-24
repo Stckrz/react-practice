@@ -1,0 +1,27 @@
+.bigwrap{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 5px;
+	width: 100%;
+}
+.faqItemWrapper{
+	border: 3px solid #0D6EFD;
+	border-radius: 5px;
+}
+.title{
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.description{
+	display: flex;
+	padding: 2px;
+
+}
+.shithole{
+	margin-top: -10px;
+	font-size: 25px;
+}

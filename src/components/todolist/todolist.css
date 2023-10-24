@@ -35,7 +35,7 @@ display: flex;
 
 .listBox{
 display: flex;
-flex-direction: column;
+flex-direction: column-reverse;
 overflow-y: auto;
 height: 200px;
 }

@@ -26,7 +26,7 @@ export function MyInput() {
 						onClick={() => setForm({ ...form, enterStuff: "buttstuff" })}>{form.buttontext}
 					</button>
 				</div>
-				<div className="">
+				<div className="textBox">
 					<p>{form.enterStuff}</p>
 				</div>
 			</div>
@@ -51,7 +51,9 @@ export function MyInput2() {
 					onChange={handleChange} />
 				<button className="btn btn-primary" onClick={() => setText("buttstuff")}>aaah</button>
 				</div>
+			<div className="textBox">
 				<p>{text}</p>
+				</div>
 		</>
 	);
 }

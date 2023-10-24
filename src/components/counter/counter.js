@@ -33,13 +33,13 @@ export function Counter() {
 			<button onClick={handleDecrement} className="nuttin">-</button>
 			<div className="countBox">
 				<div
+					onClick={handleReset}
 					key={count}
 					className={cssClass}>
 					{count}
 				</div>
 			</div>
 			<button onClick={handleIncrement} className="nuttin">+</button>
-			<button onClick={handleReset} className="btn btn-primary">reset</button>
 		</div>
 
 	)
