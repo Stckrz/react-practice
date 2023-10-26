@@ -7,14 +7,14 @@ align-items: center;
 width: 100%;
 }
 
-.listAnimation{
-animation: listadd 0.5s;
-}
-@keyframes listadd{
-0%{transform: translateX(-60px);}
-100%{transform: translateX(0px);}
-
-}
+/* .listAnimation{ */
+/* animation: listadd 0.5s; */
+/* } */
+/* @keyframes listadd{ */
+/* 0%{transform: translateX(-60px);} */
+/* 100%{transform: translateX(0px);} */
+/**/
+/* } */
 
 .inputBox{
 	display: flex;
@@ -35,7 +35,7 @@ display: flex;
 
 .listBox{
 display: flex;
-flex-direction: column-reverse;
+flex-direction: column;
 overflow-y: auto;
 height: 200px;
 }

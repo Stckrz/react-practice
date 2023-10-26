@@ -5,12 +5,22 @@
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
-  background-color: #CAE0EF;
+  /* color: blue; */
 }
-
+#light{
+  background-color: #CAE0EF;
+  color: blue;;
+  transition: 0.5s;
+}
+#dark{
+  background-color: #1A1B26;
+  transition: 0.5s;
+  color: white;
+  }
+  
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,35 +34,14 @@
   color: #61dafb;
 }
 
-.content-wrapper{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  background-color: #CAE0EF;
-  border: 2px solid black;
-  width: 100%;
-  gap: 10px;
-  margin: 5px;
-  padding: 5px;
-  border-radius: 1em;
-  min-height: 50px;
-  min-width: 50px;
-}
 .content{
 	display: flex;
-justify-content: center;
-align-items: center;
-	background-color: #CAE0EF;
+	justify-content: center;
+	align-items: center;
 	border-radius: 1em;
 	padding: 10px;
 	margin: 5px;
 	height: 260px;
-}
-.style-stuff{
-  color: red;
-  background-color: black;
 }
 
 

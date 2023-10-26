@@ -1,0 +1,16 @@
+.planetbox{
+	display: flex; 
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center;
+	width: 150px;
+	height: 150px;
+}
+#light .planetbox{
+	border: 2px solid #0D6EFD;
+	transition: border 0.5s;
+}
+#dark .planetbox{
+	border: 2px solid white;
+	transition: border 0.5s;
+}

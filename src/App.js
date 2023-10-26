@@ -11,30 +11,44 @@ import { Faq } from './components/faq/faq';
 import { StarRating } from './components/stars/stars';
 import { Weather } from './components/weather/weather';
 import { Carousel } from './components/carousel/carousel';
+import { DarkMode } from './components/darkmode/darkmode';
+import { createContext, useState } from 'react';
+
+export const ThemeContext = createContext("light");
 
 function App() {
+	const [theme, setTheme] = useState("light");
+
+	const toggleTheme = () => {
+		setTheme((current) => (current === "light" ? "dark" : "light"));
+	}
 	return (
-		<div className="App">
-			<BootstrapNavToggle />
-			<div className="container-md">
-				<div className="row row-cols-4">
-					<div className="col content"><MyInput /></div>
-{/*					<div className="col content"><MyInput2 /></div>*/}
-					<div className="col content"><PlanetList /></div>
-					<div className="col content"><ToDoList /></div>
-					<div className="col content"><Counter /></div>
-					<div className="col content"><Parent /></div>
-					<div className="col content"><ModalExample /></div>
-					<div className="col content"><Faq /></div>
-					<div className="col content"><StarRating /></div>
-					<div className="col content"><Weather /></div>
-					<div className="col content"><Carousel /></div>
+		<ThemeContext.Provider value={{ theme, toggleTheme }}>
 
 
 
+			<div className="App" id={ theme }>
+				<BootstrapNavToggle />
+				<DarkMode toggle={ toggleTheme } />
+				<div className="container-md">
+					<div className="row row-cols-4">
+						<div className="col content"><MyInput /></div>
+						<div className="col content"><PlanetList /></div>
+						<div className="col content"><ToDoList /></div>
+						<div className="col content"><Counter /></div>
+						<div className="col content"><Parent /></div>
+						<div className="col content"><ModalExample /></div>
+						<div className="col content"><Faq /></div>
+						<div className="col content"><StarRating /></div>
+						<div className="col content"><Weather /></div>
+						<div className="col content"><Carousel /></div>
+
+
+
+					</div>
 				</div>
 			</div>
-		</div>
+		</ThemeContext.Provider>
 	);
 }
 

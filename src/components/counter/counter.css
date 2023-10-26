@@ -47,12 +47,23 @@ align-items: center;
 .nuttin{
 padding-bottom: 10px;
 border: none;
-background-color: #CAE0EF;
 font-size: 40px;
+
 opacity: 50%;
 transition: opacity 0.5s;
 }
 
+#light .nuttin{
+  background-color: #CAE0EF;
+  transition: 0.5s;
+  color: black;
+}
+#dark .nuttin{
+  background-color: #1A1B26;
+  transition: 0.5s;
+  color: white;
+}
+
 .nuttin:hover{
-opacity: 85%;
+  opacity: 85%;
 }

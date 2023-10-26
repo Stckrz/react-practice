@@ -1,7 +1,23 @@
 .displayWeather{
-color: #0C6EFD;
 font-size: 25px;
 }
-.cityname{
-color: black;
+
+#light .displayWeather{
+color: #0C6EFD;
+transition: 0.5s;
+}
+
+#dark .displayWeather{
+color: white;
+transition: 0.5s;
+}
+
+#light .cityname{
+color: #0C6EFD;
+transition: 0.5s;
+}
+
+#dark .cityname{
+color: white;
+transition: 0.5s;
 }

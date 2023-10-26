@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-
+import './planets.css';
 
 
 export function PlanetList() {
@@ -14,15 +14,8 @@ export function PlanetList() {
 		{ name: "Uranus", isGasPlanet: true },
 	]
 	return (
-		<div style={{
-			display: "flex", 
-			flexDirection: "column",
-			justifyContent: "center", 
-			alignItems: "center",
-			width: "150px",
-			height: "150px",
-			border: "2px solid #0D6EFD"
-			}}>
+		<div className="planetbox">
+			
 			{planets.map((planet, key) => {
 				{
 					return (

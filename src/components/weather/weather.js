@@ -5,9 +5,9 @@ import './weather.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCloud, faSun, faCloudSun, faCloudRain } from '@fortawesome/free-solid-svg-icons'
+import { faCloudBolt, faCloud, faSun, faCloudSun, faCloudRain } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faCloud, faSun, faCloudSun, faCloudRain);
+library.add(faCloudBolt, faCloud, faSun, faCloudSun, faCloudRain);
 
 const weatherURL = 'https://api.weather.gov/gridpoints/SGF/67,35/forecast/hourly';
 
@@ -15,6 +15,7 @@ const cloud = <FontAwesomeIcon icon="fa-cloud" />
 const cloudsun = <FontAwesomeIcon icon="fa-cloud-sun" />
 const rain = <FontAwesomeIcon icon="fa-cloud-rain" />
 const sun = <FontAwesomeIcon icon="fa-sun" />
+const thunder = <FontAwesomeIcon icon="fa-cloud-bolt" />
 
 
 
@@ -39,7 +40,7 @@ export function Weather() {
 
 	function cloudIconHandler(clouds) {
 		let cloudIcon="";
-		let conditionArray=["Partly Sunny", "Partly Cloudy", "Cloudy", "Sunny", "Rainy"]
+		let conditionArray=["Partly Sunny", "Partly Cloudy", "Cloudy", "Sunny", "Rainy", "Mostly Cloudy", "Showers And Thunderstorms Likely", "Chance Showers And Thunderstorms"]
 		switch (conditionArray.indexOf(clouds)) {
 			case 0:
 				cloudIcon = (cloudsun);
@@ -55,6 +56,15 @@ export function Weather() {
 				break;
 			case 4:
 				cloudIcon = rain;
+				break;
+			case 5:
+				cloudIcon = cloud;
+				break;
+			case 6:
+				cloudIcon = thunder;
+				break;
+			case 7:
+				cloudIcon = thunder;
 				break;
 			case -1:
 				cloudIcon = clouds;

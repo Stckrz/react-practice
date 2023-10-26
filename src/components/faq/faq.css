@@ -9,6 +9,16 @@
 	border: 3px solid #0D6EFD;
 	border-radius: 5px;
 }
+#light .faqItemWrapper{
+	border: 3px solid #0D6EFD;
+	transition: border 0.5s;
+}
+#dark .faqItemWrapper{
+	border: 3px solid white;
+	transition: border 0.5s;
+}
+
+
 .title{
 	display: flex;
 	justify-content: space-between;
