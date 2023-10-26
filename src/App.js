@@ -9,6 +9,8 @@ import { Parent } from './components/propsplay/propsplay';
 import { ModalExample } from './components/modal/modal';
 import { Faq } from './components/faq/faq';
 import { StarRating } from './components/stars/stars';
+import { Weather } from './components/weather/weather';
+import { Carousel } from './components/carousel/carousel';
 
 function App() {
 	return (
@@ -25,6 +27,9 @@ function App() {
 					<div className="col content"><ModalExample /></div>
 					<div className="col content"><Faq /></div>
 					<div className="col content"><StarRating /></div>
+					<div className="col content"><Weather /></div>
+					<div className="col content"><Carousel /></div>
+
 
 
 				</div>
