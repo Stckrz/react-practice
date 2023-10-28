@@ -1,0 +1,10 @@
+.lifecycles{
+font-size: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 250px;
+height: 250px;
+overflow: hidden;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { MyInput, MyInput2 } from '../liveinput/liveinput'
 import './navbar.css';
 
 
@@ -40,7 +39,6 @@ export function BootstrapNavToggle() {
                 </li>
               </ul>
               <form className="d-flex">
-				 {/*<MyInput />*/}
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 <button className="btn btn-outline-success" type="submit">Search</button>
               </form>
@@ -53,7 +51,7 @@ export function BootstrapNavToggle() {
         <button
           type="button"
           className="btn btn-secondary"
-        onClick={() => setToggle(!toggle)}>Click</button>
+        onClick={() => setToggle(!toggle)}>Collapse</button>
     </div>
     </div >
   );

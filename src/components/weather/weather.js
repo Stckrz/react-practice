@@ -8,22 +8,19 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCloudBolt, faCloud, faSun, faCloudSun, faCloudRain } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faCloudBolt, faCloud, faSun, faCloudSun, faCloudRain);
-
-const weatherURL = 'https://api.weather.gov/gridpoints/SGF/67,35/forecast/hourly';
-
 const cloud = <FontAwesomeIcon icon="fa-cloud" />
 const cloudsun = <FontAwesomeIcon icon="fa-cloud-sun" />
 const rain = <FontAwesomeIcon icon="fa-cloud-rain" />
 const sun = <FontAwesomeIcon icon="fa-sun" />
 const thunder = <FontAwesomeIcon icon="fa-cloud-bolt" />
 
+const weatherURL = 'https://api.weather.gov/gridpoints/SGF/67,35/forecast/hourly';
 
 
 export function Weather() {
 
 	const [currentTemp, setCurrentTemp] = useState([]);
 	const [clouds, setClouds] = useState([])
-	const [cloudIcon, setCloudIcon] = useState()
 
 	useEffect(() => {
 		axios.get(weatherURL).then((response) => {
@@ -40,7 +37,17 @@ export function Weather() {
 
 	function cloudIconHandler(clouds) {
 		let cloudIcon="";
-		let conditionArray=["Partly Sunny", "Partly Cloudy", "Cloudy", "Sunny", "Rainy", "Mostly Cloudy", "Showers And Thunderstorms Likely", "Chance Showers And Thunderstorms"]
+		let conditionArray=[
+			"Partly Sunny", 
+			"Partly Cloudy", 
+			"Cloudy", 
+			"Sunny", 
+			"Rainy", 
+			"Mostly Cloudy", 
+			"Showers And Thunderstorms Likely", 
+			"Chance Showers And Thunderstorms",
+			"Scattered Showers And Thunderstorms"
+		]
 		switch (conditionArray.indexOf(clouds)) {
 			case 0:
 				cloudIcon = (cloudsun);
@@ -64,6 +71,9 @@ export function Weather() {
 				cloudIcon = thunder;
 				break;
 			case 7:
+				cloudIcon = thunder;
+				break;
+			case 8:
 				cloudIcon = thunder;
 				break;
 			case -1:
