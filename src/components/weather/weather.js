@@ -46,7 +46,8 @@ export function Weather() {
 			"Mostly Cloudy", 
 			"Showers And Thunderstorms Likely", 
 			"Chance Showers And Thunderstorms",
-			"Scattered Showers And Thunderstorms"
+			"Scattered Showers And Thunderstorms",
+			"Areas Of Drizzle"
 		]
 		switch (conditionArray.indexOf(clouds)) {
 			case 0:
@@ -75,6 +76,9 @@ export function Weather() {
 				break;
 			case 8:
 				cloudIcon = thunder;
+				break;
+			case 9:
+				cloudIcon = rain;
 				break;
 			case -1:
 				cloudIcon = clouds;
